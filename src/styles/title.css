@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'IronMan';
+    src: url('../assets/iron-man-font.ttf');
+}
+
+.title {
+    font-family: 'IronMan';
+    width: 100vw;
+    text-align: center;
+    background-color: rgba(68, 67, 67, .9);
+    margin-top: 0;
+    height: 13vh;
+    align-content: center;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(255, 215, 0, 1), 0 0 5px rgba(255, 165, 0, 1), 0 0 20px rgba(255, 69, 0, 1);
+    font-size: 3em;
+    margin-bottom: 0;
+}

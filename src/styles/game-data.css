@@ -1,0 +1,30 @@
+.game-data {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgb(187, 184, 184);
+    margin-top: 0;
+    height: 10vh;
+}
+
+.objective {
+    font-size: .5em;
+    align-content: center;
+    width: 30vw;
+    text-align: center;
+}
+
+.score {
+    width: 30vw;
+    text-align: center;
+    align-content: center;
+}
+
+.high-score {
+    width: 30vw;
+    align-content: center;
+}

@@ -1,0 +1,23 @@
+.gameboard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 77vh;
+}
+
+.gameboard div {
+    border: 2px solid gray;
+    box-shadow: 0 0 20px 5px yellow;
+    height: 45vh;
+    width: 13vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform .05s ease-in-out;
+}
+
+.gameboard div:hover {
+    cursor: grab;
+    box-shadow: 0 0 20px 5px green;
+    transform: scale(1.05);
+}
