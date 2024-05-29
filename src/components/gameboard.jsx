@@ -1,5 +1,6 @@
 import '../styles/gameboard.css'
 import { useState } from 'react'
+import { updateScore, updateHighScore } from './game-data';
 // import { photos } from '../main'
 
 export function randomizeCards(array) {
@@ -11,13 +12,14 @@ export function randomizeCards(array) {
     return array;
 }
 
-function generateCard(photo, className, handleClick) {
+function generateCard(photo, className, handleClick, id) {
     const photoUrl = `url('${photo}')`
     return (
         <div 
             className={className} 
-            key={className}
-            onClick={handleClick}
+            key={id}
+            id = {id}
+            onClick={event => handleClick(event)}
             style={{backgroundImage: photoUrl}}
         ></div>
     )
@@ -35,19 +37,24 @@ const photos = [
 export function Gameboard() {
     let cards = [
         // change keys later when using the actual API
-        generateCard(photos[0], 'iron-man', handleClick),
-        generateCard(photos[1], 'hulk', handleClick),
-        generateCard(photos[2], 'spider-man', handleClick),
-        generateCard(photos[3], 'captain-america', handleClick),
-        generateCard(photos[4], 'scarlet-witch', handleClick),
+        generateCard(photos[0], 'iron-man', handleClick, 'ironMan'),
+        generateCard(photos[1], 'hulk', handleClick, 'hulk'),
+        generateCard(photos[2], 'spider-man', handleClick, 'spiderMan'),
+        generateCard(photos[3], 'captain-america', handleClick, 'captainAmerica'),
+        generateCard(photos[4], 'scarlet-witch', handleClick, 'scarletWitch'),
     ]
 
     randomizeCards(cards)
     const [cardOrder, setCardOrder] = useState(cards)
-    console.log(cards)
-
-
-    function handleClick() {
+    const [heroesSelected, setHeroesSelected] = useState({
+        ironMan: false,
+        hulk: false,
+        spiderMan: false,
+        captainAmerica: false,
+        scarletWitch: false
+    })
+    
+    function handleClick(event) {
         console.log('You clicked it')
         randomizeCards(cards)
         const cardsObject = {
@@ -58,6 +65,13 @@ export function Gameboard() {
             [4]:cards[4]
         }
         setCardOrder(cardsObject);
+        if (heroesSelected[event.target.id]) {
+            console.log('you already clicked it!')
+        } else {
+            setHeroesSelected(heroesSelected, heroesSelected[event.target.id]= true);
+            updateScore()
+            updateHighScore()
+        }
     }
     
     return(
