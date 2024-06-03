@@ -34,6 +34,16 @@
         height: 22vh;
         width: 28vw;
     }
+    .gameboard div:hover {
+        cursor: initial;
+        box-shadow: initial;
+        transform: initial;
+    }
+    .gameboard div:active {
+        cursor: grab;
+        box-shadow: 0 0 20px 12px green;
+        transform: scale(1.05);
+    } 
 }
 
 @media(min-width: 500px) and (max-width: 1200px) {
@@ -44,5 +54,15 @@
     .gameboard div {
         height: 28vh;
         width: 25vw;
+    }
+    .gameboard div:hover {
+        cursor: initial;
+        box-shadow: initial;
+        transform: initial;
+    }
+    .gameboard div:active {
+        cursor: grab;
+        box-shadow: 0 0 20px 12px green;
+        transform: scale(1.05);
     }
 }
