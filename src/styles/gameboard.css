@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 77vh;
+    height: 75vh;
 }
 
 .gameboard div {
@@ -23,4 +23,31 @@
     cursor: grab;
     box-shadow: 0 0 20px 12px green;
     transform: scale(1.05);
+}
+
+.gameboard div:focus {
+    box-shadow: 0 0 20px 12px green;
+    transform: scale(1.05);
+}
+
+@media(min-width: 300px) and (max-width: 500px) {
+    .gameboard {
+        height: 68vh;
+        flex-wrap: wrap;
+    }
+    .gameboard div {
+        height: 22vh;
+        width: 28vw;
+    }
+}
+
+@media(min-width: 500px) and (max-width: 1200px) {
+    .gameboard {
+        height: 68vh;
+        flex-wrap: wrap;
+    }
+    .gameboard div {
+        height: 28vh;
+        width: 25vw;
+    }
 }

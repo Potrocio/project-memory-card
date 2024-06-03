@@ -16,3 +16,17 @@
     font-size: 3em;
     margin-bottom: 0;
 }
+
+@media(min-width: 300px) and (max-width: 500px){
+    .title{
+        font-size: 2em;
+        height: 12vh;
+    }
+}
+
+@media(min-width: 500px) and (max-width: 1200px){
+    .title{
+        font-size: 3em;
+        height: 12vh;
+    }
+}

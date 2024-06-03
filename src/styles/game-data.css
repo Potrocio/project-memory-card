@@ -8,7 +8,7 @@
     background-color: rgba(0, 0, 0, 0.9);
     color: rgb(187, 184, 184);
     margin-top: 0;
-    height: 10vh;
+    height: 12vh;
 }
 
 .objective {
@@ -27,4 +27,55 @@
 .high-score {
     width: 30vw;
     align-content: center;
+    text-align: center;
+}
+
+@media(min-width: 300px) and (max-width: 500px) {
+    .game-data {
+        height: 20vh;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .objective {
+        width: 100%;
+        height: fit-content;
+        align-content: center;
+        font-size: .7em;
+    }
+    .score, .high-score {
+        font-size: .9em;
+        width: 50vw;
+        align-content: center;
+        text-align: center;
+    }
+    .score {
+        width: 35vw;
+    }
+}
+
+@media(min-width: 500px) and (max-width: 1200px) {
+    .game-data {
+        height: 20vh;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .objective {
+        width: 100%;
+        height: fit-content;
+        align-content: center;
+        font-size: 1em;
+    }
+    .score, .high-score {
+        font-size: 1em;
+        width: 50vw;
+        align-content: center;
+        text-align: center;
+    }
+    .score {
+        width: 35vw;
+    }
 }
