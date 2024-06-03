@@ -14,10 +14,13 @@
     background-repeat: no-repeat;
     background-position: center;
     transition: transform .05s ease-in-out;
+    background-color: rgb(1, 1, 51);
+    border-radius: 20px;
+
 }
 
 .gameboard div:hover {
     cursor: grab;
-    box-shadow: 0 0 20px 5px green;
+    box-shadow: 0 0 20px 12px green;
     transform: scale(1.05);
 }
