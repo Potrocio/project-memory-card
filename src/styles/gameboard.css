@@ -33,6 +33,7 @@
     .gameboard div {
         height: 22vh;
         width: 28vw;
+        transition: transform ease-out;
     }
     .gameboard div:hover {
         cursor: initial;
@@ -54,6 +55,7 @@
     .gameboard div {
         height: 28vh;
         width: 25vw;
+        transition: transform ease-out;
     }
     .gameboard div:hover {
         cursor: initial;
